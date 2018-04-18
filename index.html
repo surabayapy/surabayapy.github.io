@@ -159,6 +159,8 @@ $('document').ready(function()
             url  : 'https://surabayapy.pythonanywhere.com/api/daftar-anggota/',
             data : data,
             contentType: "application/json",
+            crossDomain: true,
+            dataType: 'jsonp',
             processData : false,
             beforeSend: function()
             {
