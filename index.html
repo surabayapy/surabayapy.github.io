@@ -1,10 +1,192 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Surabaya.py Reborn - Coming Soon</title>
-</head>
+<meta charset="UTF-8" />
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+<style id="webmakerstyle">
+.bg-gradient {
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(-30deg, #4f70ce 0%, #12bbad 50%, #12bbad 100%);
+  height : 100vh;
+}
+
+.dropdown-item {
+  color:#ffffff;
+}
+
+.dropdown-item:hover {
+  color:#000000;
+}
+
+.game-features {
+  background-color:
+}
+
+.secondary-footer {
+  background-color:#222a36;
+}
+
+</style>
+</head>
 <body>
-<h1 style="text-align:center">Coming Soon</h1>
-<img src="img/logo.png" style="width: 100vw;">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="img/logo.png" height="50"/></a>
+</nav>
+
+<!-- Heading -->
+<div class="py-5 text-center bg-gradient">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="display-1">Surabaya.py</h1>
+        <p>
+          Komunitas Pengguna Pemrograman Python Surabaya
+        </p>
+      </div>
+      <div class="col-md-4"id="pendaftaran">
+        <h1 class="font-weight-light">
+          Gabung Bersama Kami
+        </h1>
+        <form class="form-signin" method="post" id="register-form">
+          <div class="form-group">
+            <input type="text" class="form-control" id="nama" placeholder="Nama Kamu" name="nama">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder="alamat@email.com">
+          </div>
+          <div class="form-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text" style="width:100%">https://t.me/<input type="text" class="form-control" id="telegram" name="telegram" placeholder="ID Telegram">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text" style="width:100%">https://github.com/<input type="text" class="form-control" name="github" id="github" placeholder="ID Github">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+                <button type="submit" class="btn btn-default" id="btn-submit">
+                    Gabung
+                </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="secondary-footer text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-white">© Copyright 2018 Surabaya.py Team - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script>
+$('document').ready(function()
+{
+    /* validation */
+    $("#register-form").validate({
+        rules:
+        {
+            nama: {
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                email: true,
+                minlength: 3
+            },
+            telegram: {
+                required: true,
+                minlength: 3
+            },
+            github: {
+                required: true,
+                minlength: 3
+            },
+        },
+        messages:
+        {
+            nama: "Enter a Valid Username",
+            email: "Enter a Valid Email",
+            telegram: "Enter a Valid Telegram ID",
+            github: "Enter a Valid Github ID"
+        },
+        submitHandler: submitForm
+    });
+    /* validation */
+
+    function getFormData($form){
+        var unindexed_array = $form.serializeArray();
+        var indexed_array = {};
+
+        $.map(unindexed_array, function(n, i){
+            indexed_array[n['name']] = n['value'];
+        });
+
+        return JSON.stringify(indexed_array);
+    }
+  
+    /* form submit */
+    function submitForm()
+    {
+        console.log("Form Submitted");
+        var $form = $("#register-form");
+        var data = getFormData($form);
+      
+        console.log(data);
+
+        $.ajax({
+
+            type : 'POST',
+            url  : 'https://http://surabayapy.pythonanywhere.com/api/daftar-anggota/',
+            data : data,
+            contentType: "application/json",
+            processData : false,
+            beforeSend: function()
+            {
+                $("#error").fadeOut();
+                $("#btn-submit").html('sending ...');
+            },
+            success :  function(data)
+            {
+              if(data["status"] == "success"){
+                $("#pendaftaran").html('<h1 class="font-weight-light">Daftar Sukses</h1><p>Silahkan cek telegram anda.</p>');
+              }
+              else {
+                $("#pendaftaran").html('<h1 class="font-weight-light">' + data["data"] + '</h1>');
+                setTimeout(location.reload.bind(location), 3000);
+              }
+            },
+          
+            error: function (xhr, ajaxOptions, thrownError) {
+              alert(xhr.status);
+              alert(thrownError);
+            }
+        });
+        return false;
+    }
+    /* form submit */
+
+});
+//# sourceURL=userscript.js
+</script>
 </body>
 </html>
