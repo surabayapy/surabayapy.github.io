@@ -154,7 +154,7 @@ $('document').ready(function()
       
         console.log(data);
 //         $.post( "https://surabayapy.pythonanywhere.com/api/daftar-anggota/", data, function(result) {console.log(result);}, "json");
-      $.ajaxSetup({
+      $.ajax({
           type: "POST",
           url  : 'https://surabayapy.pythonanywhere.com/login',
           data: {},
@@ -213,7 +213,7 @@ $('document').ready(function()
 //               alert(thrownError);
 //             }
 //         });
-//         return false;
+         return false;
     }
     /* form submit */
 
