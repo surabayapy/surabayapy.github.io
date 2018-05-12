@@ -163,7 +163,22 @@ $('document').ready(function()
              withCredentials: true
           },
           crossDomain: true,
-          contentType: 'application/json; charset=utf-8'
+          contentType: 'application/json; charset=utf-8',
+          success :  function(data)
+          {
+            if(data["status"] == "success"){
+              $("#pendaftaran").html('<h1 class="font-weight-light">Daftar Sukses</h1><p>Silahkan cek telegram anda.</p>');
+            }
+            else {
+              $("#pendaftaran").html('<h1 class="font-weight-light">' + data["data"] + '</h1>');
+              setTimeout(location.reload.bind(location), 3000);
+            }
+          },
+
+          error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+          }
       });
 //         $.ajax({
 //             type : 'POST',
