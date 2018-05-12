@@ -154,40 +154,50 @@ $('document').ready(function()
       
         console.log(data);
 //         $.post( "https://surabayapy.pythonanywhere.com/api/daftar-anggota/", data, function(result) {console.log(result);}, "json");
-      
-        $.ajax({
-            type : 'POST',
-            url  : 'https://surabayapy.pythonanywhere.com/api/daftar-anggota/',
-            data : data,
-            dataType: 'json',
-            xhrFields: {
-              withCredentials: true
-            },
-            crossDomain: true,
-            contentType: 'application/json; charset=utf-8'
+      $.ajaxSetup({
+          type: "POST",
+          url  : 'https://surabayapy.pythonanywhere.com/login',
+          data: {},
+          dataType: 'json',
+          xhrFields: {
+             withCredentials: true
+          },
+          crossDomain: true,
+          contentType: 'application/json; charset=utf-8'
+      });
+//         $.ajax({
+//             type : 'POST',
+//             url  : 'https://surabayapy.pythonanywhere.com/api/daftar-anggota/',
+//             data : data,
+//             dataType: 'json',
+//             xhrFields: {
+//               withCredentials: true
+//             },
+//             crossDomain: true,
+//             contentType: 'application/json; charset=utf-8'
             
-            beforeSend: function()
-            {
-                $("#error").fadeOut();
-                $("#btn-submit").html('sending ...');
-            },
-            success :  function(data)
-            {
-              if(data["status"] == "success"){
-                $("#pendaftaran").html('<h1 class="font-weight-light">Daftar Sukses</h1><p>Silahkan cek telegram anda.</p>');
-              }
-              else {
-                $("#pendaftaran").html('<h1 class="font-weight-light">' + data["data"] + '</h1>');
-                setTimeout(location.reload.bind(location), 3000);
-              }
-            },
+//             beforeSend: function()
+//             {
+//                 $("#error").fadeOut();
+//                 $("#btn-submit").html('sending ...');
+//             },
+//             success :  function(data)
+//             {
+//               if(data["status"] == "success"){
+//                 $("#pendaftaran").html('<h1 class="font-weight-light">Daftar Sukses</h1><p>Silahkan cek telegram anda.</p>');
+//               }
+//               else {
+//                 $("#pendaftaran").html('<h1 class="font-weight-light">' + data["data"] + '</h1>');
+//                 setTimeout(location.reload.bind(location), 3000);
+//               }
+//             },
           
-            error: function (xhr, ajaxOptions, thrownError) {
-              alert(xhr.status);
-              alert(thrownError);
-            }
-        });
-        return false;
+//             error: function (xhr, ajaxOptions, thrownError) {
+//               alert(xhr.status);
+//               alert(thrownError);
+//             }
+//         });
+//         return false;
     }
     /* form submit */
 
