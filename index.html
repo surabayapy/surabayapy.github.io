@@ -153,10 +153,7 @@ $('document').ready(function()
         var data = getFormData($form);
       
         console.log(data);
-        $.post( "https://surabayapy.pythonanywhere.com/api/daftar-anggota/", data)
-          .done(function(result) {
-            alert( "Data Loaded: " + result );
-          });
+        $.post( "https://surabayapy.pythonanywhere.com/api/daftar-anggota/", data, function(result) {console.log(result);}, "json");
       
 //         $.ajax({
 //             type : 'POST',
