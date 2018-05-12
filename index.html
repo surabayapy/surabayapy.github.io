@@ -154,14 +154,13 @@ $('document').ready(function()
         console.log(data);
 
         $.ajax({
-
             type : 'POST',
             url  : 'https://surabayapy.pythonanywhere.com/api/daftar-anggota/',
             data : data,
+            processData : false,
             contentType: "application/json",
             crossDomain: true,
             dataType: 'jsonp',
-            processData : false,
             beforeSend: function()
             {
                 $("#error").fadeOut();
