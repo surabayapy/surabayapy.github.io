@@ -167,10 +167,13 @@ $('document').ready(function()
           {
             if(data["status"] == "success"){
               $("#pendaftaran").html('<h1 class="font-weight-light">Daftar Sukses</h1>');
+              alert(data["status"]);
+              setTimeout(location.reload.bind(location), 7000);
             }
             else {
               $("#pendaftaran").html('<h1 class="font-weight-light">' + data["data"] + '</h1>');
-              setTimeout(location.reload.bind(location), 3000);
+              alert(data["status"]);
+              setTimeout(location.reload.bind(location), 7000);
             }
           },
 
