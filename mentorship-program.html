@@ -8,10 +8,8 @@
 <title>Surabaya.py Community System</title>
 <style id="webmakerstyle">
 .bg-gradient {
-  overflow: hidden;
   color: #fff;
   background: linear-gradient(-30deg, #4f70ce 0%, #12bbad 50%, #12bbad 100%);
-  height : 100vh;
 }
 
 .dropdown-item {
@@ -65,101 +63,5 @@
     </div>
   </div>
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-<script>
-$('document').ready(function()
-{
-    /* validation */
-    $("#register-form").validate({
-        rules:
-        {
-            nama: {
-                required: true,
-                minlength: 3
-            },
-            email: {
-                required: true,
-                email: true,
-                minlength: 3
-            },
-            telegram: {
-                required: true,
-                minlength: 3
-            },
-            github: {
-                required: true,
-                minlength: 3
-            },
-        },
-        messages:
-        {
-            nama: "Enter a Valid Username",
-            email: "Enter a Valid Email",
-            telegram: "Enter a Valid Telegram ID",
-            github: "Enter a Valid Github ID"
-        },
-        submitHandler: submitForm
-    });
-    /* validation */
-
-    function getFormData($form){
-        var unindexed_array = $form.serializeArray();
-        var indexed_array = {};
-
-        $.map(unindexed_array, function(n, i){
-            indexed_array[n['name']] = n['value'];
-        });
-
-        return JSON.stringify(indexed_array);
-    }
-  
-    /* form submit */
-    function submitForm()
-    {
-        console.log("Form Submitted");
-        var $form = $("#register-form");
-        var data = getFormData($form);
-     
-      $.ajax({
-          type: "POST",
-          url  : 'https://surabayapy.pythonanywhere.com/api/daftar-anggota',
-          data: data,
-          dataType: 'json',
-          processData: false,
-          xhrFields: {
-             withCredentials: true
-          },
-          crossDomain: true,
-          contentType: 'application/json',
-          success :  function(respon)
-          {
-            if(data["status"] == "success"){
-              $("#pendaftaran").html('<h1 class="font-weight-light">Daftar Sukses</h1>');
-              alert(data["status"]);
-              setTimeout(location.reload.bind(location), 7000);
-            }
-            else {
-              $("#pendaftaran").html('<h1 class="font-weight-light">' + data["data"] + '</h1>');
-              alert(data["status"]);
-              setTimeout(location.reload.bind(location), 7000);
-            }
-          },
-
-          error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.message);
-//             alert(thrownError);
-          }
-      });
-         return false;
-    }
-    /* form submit */
-
-});
-//# sourceURL=userscript.js
-</script>
 </body>
 </html>
