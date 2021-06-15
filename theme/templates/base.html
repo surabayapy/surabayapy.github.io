@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>
+    {% block title %}{% endblock %}
+  </title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicons -->
+  <link href="{{SITEURL}}/assets/image/icon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{SITEURL}}/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{SITEURL}}/theme/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="{{SITEURL}}/theme/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="{{SITEURL}}/theme/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="t{{SITEURL}}/heme/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="{{SITEURL}}/theme/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="{{SITEURL}}/theme/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <!-- <link href="theme/css/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="{{SITEURL}}/assets/css/style.css">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo"><a href="index.html">Surabaya.py</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="{{SITEURL}}/" class="logo"><img src="{{SITEURL}}/assets/image/logo.png" alt="" class="img-fluid"></a>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          {% for m in MENUITEMS %}
+          <li class="active">
+            <a href="{{SITEURL}}/{{ m[1] }}">{{ m[0] }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="#" class="get-started-btn rounded-pill text-uppercase ml-auto"><b>Gabung</b></a>
+
+    </div>
+  </header><!-- End Header -->
+
+    {% block content %}
+    {% endblock %}
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Surabaya.py</h3>
+              <p>
+                <strong>Email:</strong> surabaya.py@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://t.me/surabayadotpy" class="telegram"><i class="bx bxl-telegram"></i></a>
+                <a href="https://twitter.com/surabayapy" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/surabaya.py" class="instagram"><i class="bx bxl-instagram"></i></a>
+<!--                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+<!--          <div class="col-lg-3 col-md-6 footer-links">-->
+<!--            <h4>Our Services</h4>-->
+<!--            <ul>-->
+<!--              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>-->
+<!--              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>-->
+<!--              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>-->
+<!--              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>-->
+<!--              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6 footer-newsletter">-->
+<!--            <h4>Our Newsletter</h4>-->
+<!--            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>-->
+<!--            <form action="" method="post">-->
+<!--              <input type="email" name="email"><input type="submit" value="Subscribe">-->
+<!--            </form>-->
+
+<!--          </div>-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Surabaya.py</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+        Designed by <a href="https://docs.getpelican.com/en/latest/#">Pelican</a> and <a href="https://bootstrapmade.com">BootstrapMade</a> with <b class="bi bi-heart">Love</b>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{SITEURL}}/theme/vendor/jquery/jquery.min.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/php-email-form/validate.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/venobox/venobox.min.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="{{SITEURL}}/theme/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{SITEURL}}/theme/js/main.js"></script>
+</body>
+
+</html>
