@@ -37,8 +37,8 @@ PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
 MENUITEMS = (
-    ('Menu Pertama', 'menu-pertama'),
-    ('Menu Kedua', 'menu-kedua'),
+    # ('Menu Pertama', 'menu-pertama'),
+    # ('Menu Kedua', 'menu-kedua'),
 )
 
 # DEFAULT_PAGINATION = 10
