@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+{% block meta %}
+<meta name="title" content="{{page.title}}">
+<meta name="description"
+    content="{{page.description}}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{SITEURL}}">
+<meta property="og:title" content="{{page.title}}">
+<meta property="og:description"
+    content="{{page.description}}">
+<meta property="og:image" content="{{SITEURL}}/assets/image/icon.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{SITEURL}}">
+<meta property="twitter:title" content="{{page.title}}">
+<meta property="twitter:description"
+    content="{{page.description}}">
+<meta property="twitter:image" content="{{SITEURL}}/assets/image/icon.png">
+{% endblock %}
+
+{% block title %}{{ page.title }}{% endblock %}
+{% block content %}
+
+<!-- <section class="pt-5 pb-5">
+  <div class="container">
+
+  </div>
+</section> -->
+<section class="mt-12 section-with-bg default-page">
+  <div class="container" data-aos="fade-up">
+    <div class="section-header">
+        <h2>{{ page.title }}</h2>
+    </div>
+    <div class="border rounded flex flex-col-reverse md:flex-row">
+      <div class="px-3 md:px-10 mb-5 text-justify">
+        <p class="text-left">{{ page.description }}</p>
+      </div>
+      <div class="w-full mb-5 md:mb-0 md:w-1/2 mx-auto">
+        <div class="">
+          <img class="img-fluid" alt="webinar"
+            src="{{SITEURL}}/assets/image/event/{{ page.poster }}">
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-row justify-center">
+      <a href="{{SITEURL}}{{ page.register_link }}" class="mx-auto px-5 py-2 w-full md:w-1/2 text-white font-bold bg-yellow-500 hover:bg-yellow-300 rounded-lg text-center">
+        Daftar
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

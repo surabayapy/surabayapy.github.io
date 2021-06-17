@@ -5,9 +5,6 @@
   <title>
     {% block title %}{% endblock %}
   </title>
-  
-  {% include 'meta.html'%}
-
   <!-- Favicons -->
   <link href="{{SITEURL}}/assets/image/icon.png" rel="icon">
 
@@ -17,6 +14,7 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+  <link href="https://unpkg.com/tailwindcss@2.1.4/dist/tailwind.min.css" rel="stylesheet">
   <link href="{{SITEURL}}/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="{{SITEURL}}/theme/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="{{SITEURL}}/theme/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -28,6 +26,8 @@
   <!-- Template Main CSS File -->
   <!-- <link href="theme/css/style.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="{{SITEURL}}/assets/css/style.css">
+
+  {% block meta %}{% endblock %}
 </head>
 
 <body>
