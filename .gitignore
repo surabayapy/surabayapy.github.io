@@ -1,4 +1,5 @@
 .env/
 .idea/
+venv/
 output/
 __pycache__/
