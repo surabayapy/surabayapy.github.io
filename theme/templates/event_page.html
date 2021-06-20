@@ -6,14 +6,14 @@
 {% block meta %}
 <meta name="title" content="{{page.title}}">
 <meta name="description"
-    content="{{page.description}}">
+    content="Event {{ page.tema }} pada {{ page.waktu }} di {{ page.tempat }}">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{SITEURL}}">
 <meta property="og:title" content="Surabaya.py | {{page.title}}">
 <meta property="og:description"
-    content="{{page.description}}">
+    content="Event {{ page.tema }} pada {{ page.waktu }} di {{ page.tempat }}.">
 <meta property="og:image" content="{{SITEURL}}/assets/image/event/{{ page.poster }}">
 
 <!-- Twitter -->
@@ -21,7 +21,7 @@
 <meta property="twitter:url" content="{{SITEURL}}">
 <meta property="twitter:title" content="Surabaya.py | {{page.title}}">
 <meta property="twitter:description"
-    content="{{page.description}}">
+    content="Event {{ page.tema }} pada {{ page.waktu }} di {{ page.tempat }}.">
 <meta property="twitter:image" content="{{SITEURL}}/assets/image/event/{{ page.poster }}">
 {% endblock %}
 
