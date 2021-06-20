@@ -40,13 +40,21 @@
     </div>
     <div class="border rounded flex flex-col-reverse md:flex-row">
       <div class="px-3 md:px-10 mb-5 text-justify">
-        <p>{{ page.content }}</p>
-        <p>Tema: {{ page.tema }}</p>
-        <p>Waktu: {{ page.waktu }}</p>
-        <p>Tempat: {{ page.tempat }}</p>
-        <p>{{ page.description_closing }}</p>
+        <div>
+          <p>{{ page.content }}</p>
+          <p>Tema: {{ page.tema }}</p>
+          <p>Waktu: {{ page.waktu }}</p>
+          <p>Tempat: {{ page.tempat }}</p>
+          <p>{{ page.description_closing }}</p>
+        </div>
+        <div class="mx-auto flex flex-col justify-center">
+          <p>Didukung oleh:</p>
+          <a href="{{ page.support_url }}">
+            <img class="w-full md:w-60" src="{{ page.support_image_url }}" alt="{{ page.support_name }}">
+          </a>
+        </div>
       </div>
-      <div class="w-full mb-5 mb:md-0 md:w-1/2 mx-auto">
+      <div class="w-full md:w-1/2 mx-auto">
         <div class="">
           <img class="img-fluid" alt="webinar"
             src="{{SITEURL}}/assets/image/event/{{ page.poster }}">
