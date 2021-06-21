@@ -1,4 +1,5 @@
 title: Telegram Group
 Template: redirect_page
 slug: telegram
-url: 0; URL='https://t.me/surabayadotpy'
+link_url: URL='https://t.me/surabayadotpy'
+raw_url: https://t.me/surabayadotpy

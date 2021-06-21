@@ -1,4 +1,5 @@
 title: Twitter
 Template: redirect_page
 slug: twitter
-url: 0; URL='https://twitter.com/surabayapy'
+link_url: URL='https://twitter.com/surabayapy'
+raw_url: https://twitter.com/surabayapy

@@ -1,4 +1,5 @@
 title: Discord Invitation
 Template: redirect_page
 slug: discord
-url: 0; URL='https://discord.gg/FhRYMeX7wt'
+link_url: URL='https://discord.gg/FhRYMeX7wt'
+raw_url: https://discord.gg/FhRYMeX7wt

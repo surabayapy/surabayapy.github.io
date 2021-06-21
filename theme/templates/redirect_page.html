@@ -1,22 +1,36 @@
-<html>
-  <head>
-    <meta name="title" content="Surabaya.py | {{ page.title }}">
-    <meta name="description" content="Python User Group Chapter Surabaya is a community based on Surabaya focused on Python programming language. We welcome anyone who want to learn Python or someone who want to help others.">
-  
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{SITEURL}}/{{ page.slug }}">
-    <meta property="og:title" content="Surabaya.py | {{ page.title }}">
-    <meta property="og:description" content="Python User Group Chapter Surabaya is a community based on Surabaya focused on Python programming language. We welcome anyone who want to learn Python or someone who want to help others.">
-    <meta property="og:image" content="{{SITEURL}}/assets/image/icon.png">
-  
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{SITEURL}}/{{ page.slug }}">
-    <meta property="twitter:title" content="Surabaya.py | {{ page.title }}">
-    <meta property="twitter:description" content="Python User Group Chapter Surabaya is a community based on Surabaya focused on Python programming language. We welcome anyone who want to learn Python or someone who want to help others.">
-    <meta property="twitter:image" content="{{SITEURL}}/assets/image/icon.png">
+{% extends 'base.html' %}
 
-    <meta http-equiv="refresh" content=" {{ page.url }} " />
-  </head>
-</html> 
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block meta %}
+<meta name="title" content="Surabaya.py | {{ page.title }}">
+<meta name="description"
+  content="Python User Group Chapter Surabaya is a community based on Surabaya focused on Python programming language. We welcome anyone who want to learn Python or someone who want to help others.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{SITEURL}}/{{ page.slug }}">
+<meta property="og:title" content="Surabaya.py | {{ page.title }}">
+<meta property="og:description"
+  content="Python User Group Chapter Surabaya is a community based on Surabaya focused on Python programming language. We welcome anyone who want to learn Python or someone who want to help others.">
+<meta property="og:image" content="{{SITEURL}}/assets/image/icon.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{SITEURL}}/{{ page.slug }}">
+<meta property="twitter:title" content="Surabaya.py | {{ page.title }}">
+<meta property="twitter:description"
+  content="Python User Group Chapter Surabaya is a community based on Surabaya focused on Python programming language. We welcome anyone who want to learn Python or someone who want to help others.">
+<meta property="twitter:image" content="{{SITEURL}}/assets/image/icon.png">
+
+<meta http-equiv="refresh" content="url: 0; {{ page.link_url }} " />
+{% endblock %}
+
+{% block content %}
+<section class="mt-12 section-with-bg default-page">
+  <center>
+    <h2>Mohon tunggu..</h2>
+    <h3>Jika anda tidak dialihkan dalam 10 detik, silahkan klik <a href="{{ page.raw_url }}">disini</a></h3>
+  </center>
+</section>
+{% endblock %}

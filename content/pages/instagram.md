@@ -1,4 +1,5 @@
 title: Instagram
 Template: redirect_page
 slug: instagram
-url: 0; URL='https://www.instagram.com/surabaya.py'
+link_url: URL='https://www.instagram.com/surabaya.py'
+raw_url: https://www.instagram.com/surabaya.py
