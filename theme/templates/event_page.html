@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+{% block title %}{{ page.title }}{% endblock %}
 
 {% block meta %}
 <meta name="title" content="{{page.title}}">
@@ -25,7 +24,6 @@
 <meta property="twitter:image" content="{{SITEURL}}/assets/image/event/{{ page.poster }}">
 {% endblock %}
 
-{% block title %}{{ page.title }}{% endblock %}
 {% block content %}
 
 <!-- <section class="pt-5 pb-5">
