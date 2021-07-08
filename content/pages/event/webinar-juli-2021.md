@@ -18,7 +18,11 @@ kita juga bakal diajarin gimana caranya buat bikin Machine Learning jadi autopil
 
 Ssstt, kita juga akan bagi-bagi AWS credits buat kamu yang beruntung! 
 berikut adalah materi yang akan dibawakan oleh para Speaker nanti :
+
+
 1) Introduction to Machine Learning with Python dengan Setia Budi, Primary Contributor di 
 Indonesia Belajar 
+
+
 2) Bring AutoML to All Users Across your Business dengan Donnie Prakoso, Senior Developer 
 Advocate dari AWS 
