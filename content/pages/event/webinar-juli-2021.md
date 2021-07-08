@@ -6,7 +6,7 @@ register_link: http://bit.ly/AWSPythonSurabaya
 description_closing: Yuk, tandain kalender kamu dan daftar sekarang! Jangan sampe ketinggalan! 😉 
 tema: Machine Learning With Python and AutoML
 waktu: Sabtu, 31 juli 2021 14:00 WIB - 16:00 WIB
-tempat: Akan diberitahukan segera.
+tempat: Zoom.
 
 Halo Pythonista! yuk kita produktif di weekend, bareng Setia Budi dan 
 Donnie Prakoso di acara kolaborasi Surabaya.py dengan AWS!
