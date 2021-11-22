@@ -1,28 +1,21 @@
 title: Webinar Juli 2021
 Template: event_page
-slug: event/webinar-juli-2021
-poster: webinar-juli-2021.jpg
-register_link: http://bit.ly/AWSPythonSurabaya
+slug: event/webinar-november-2021
+poster: webinar-november-2021.jpeg
+register_link: http://bit.ly/SbypyNov2021
 description_closing: Yuk, tandain kalender kamu dan daftar sekarang! Jangan sampe ketinggalan! 😉 
-tema: Machine Learning With Python and AutoML
-waktu: Sabtu, 31 juli 2021 14:00 WIB - 16:00 WIB
-tempat: Zoom.
+waktu: Sabtu, 27 november 2021 13:00 WIB - 15:00 WIB
+tempat: YouTube.
 
-Halo Pythonista! yuk kita produktif di weekend, bareng Setia Budi dan 
-Donnie Prakoso di acara kolaborasi Surabaya.py dengan AWS!
+Halo Pythonista! Apa kabar ? Surabaya.py bakal ngadain Meetup online nih... 
 
-Berdasarkan hasil vote di grup Telegram Surabaya.py, kolaborasi kali ini 
-kita ambil topik tentang Machine Learning,
-dalam acara nanti kita ga hanya kenalan sama machine learning pake Python, 
-kita juga bakal diajarin gimana caranya buat bikin Machine Learning jadi autopilot pake Amazon Sagemaker!
+Meetup online kali ini akan membahas "Automate Boring Stuff with Python" dan "Introduction Azure Machine Learning with Python".
+Oh ya... Di Meetup bulan ini bakal ngadain giveaway buat tiket dan promo diskon buat Pycon ID 2021 jangan sampai ketinggalan ya!!
 
-Ssstt, kita juga akan bagi-bagi AWS credits buat kamu yang beruntung! 
 berikut adalah materi yang akan dibawakan oleh para Speaker nanti :
 
 
-1) Introduction to Machine Learning with Python dengan Setia Budi, Primary Contributor di 
-Indonesia Belajar 
+1) Automate Boring Stuff with Python dengan Dima Mahardika Dinama, Python Enthusiast 
 
 
-2) Bring AutoML to All Users Across your Business dengan Donnie Prakoso, Senior Developer 
-Advocate dari AWS 
+2) Introducing Azure Machine Learning with Python dengan Agus Suparno, Microsoft MVP 
