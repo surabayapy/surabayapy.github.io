@@ -1,4 +1,4 @@
-title: Webinar Juli 2021
+title: Webinar November 2021
 Template: event_page
 slug: event/webinar-november-2021
 poster: webinar-november-2021.jpeg
