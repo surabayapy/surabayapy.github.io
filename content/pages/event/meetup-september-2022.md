@@ -1,21 +1,15 @@
-title: Webinar November 2021
+title: Meetup September 2022
 Template: event_page
-slug: event/webinar-november-2021
-poster: webinar-november-2021.jpeg
-register_link: http://bit.ly/SbypyNov2021
+slug: event/meetup-september-2022
+poster: meetup-september-2022.png
+register_link: http://bit.ly/sbypyseptember2022
 description_closing: Yuk, tandain kalender kamu dan daftar sekarang! Jangan sampe ketinggalan! 😉 
-waktu: Sabtu, 27 november 2021 13:00 WIB - 15:00 WIB
-tempat: YouTube.
+waktu: Sabtu, 10 September 2022 10:00 WIB - 11:15 WIB
+tempat: Koridor Coworking Space
 
 Halo Pythonista! Apa kabar ? Surabaya.py bakal ngadain Meetup online nih... 
 
 Meetup online kali ini akan membahas "Automate Boring Stuff with Python" dan "Introduction Azure Machine Learning with Python".
 Oh ya... Di Meetup bulan ini bakal ngadain giveaway buat tiket dan promo diskon buat Pycon ID 2021 jangan sampai ketinggalan ya!!
 
-berikut adalah materi yang akan dibawakan oleh para Speaker nanti :
-
-
-1) Automate Boring Stuff with Python dengan Dima Mahardika Dinama, Python Enthusiast 
-
-
-2) Introducing Azure Machine Learning with Python dengan Agus Suparno, Microsoft MVP 
+Untuk materi yang akan dibahas adalah "Penggunaan Python pada WebApps skala besar (odoo ERP WebApps)" dengan pak Edy Kendengis S.Kom sebagai pematerinya.
